@@ -1,0 +1,77 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* Main container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Heading */
+.container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00c3ff;
+    text-shadow: 0 0 8px rgba(0, 195, 255, 0.4);
+}
+
+/* Cards layout: 4 in a row */
+#main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Card style */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-left: 4px solid #00c3ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 195, 255, 0.3);
+}
+
+.card h3 {
+    font-size: 2rem;
+    color: #00c3ff;
+    margin-bottom: 10px;
+}
+
+.card h5 {
+    font-size: 1.2rem;
+    color: #ffdd57;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    #main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #main {
+        grid-template-columns: 1fr;
+    }
+}
